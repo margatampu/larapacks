@@ -24,7 +24,7 @@ return [
     | ('emergency', 'alert', 'critical', 'error', 'warning', 'notice', 'info', 'debug')
     |
     */
-    'log' => env('INSPECTOR_LOG', 'warning'),
+    'log' => env('INSPECTOR_LOG', 'debug'),
 
     /*
     |--------------------------------------------------------------------------

@@ -1,7 +1,10 @@
 {
     "name": "laravel/laravel",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "type": "project",
     "require": {
@@ -26,7 +29,8 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "MargaTampu\\LaravelInspector\\": "packages/margatampu/laravel-inspector/src"
+            "MargaTampu\\LaravelInspector\\": "packages/margatampu/laravel-inspector/src",
+            "MargaTampu\\LaravelTeamsLogging\\": "packages/margatampu/laravel-teams-logging/src"
         }
     },
     "autoload-dev": {
@@ -36,8 +40,7 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": [
-            ]
+            "dont-discover": []
         }
     },
     "scripts": {
