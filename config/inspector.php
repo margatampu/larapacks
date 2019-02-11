@@ -16,6 +16,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Log
+    |--------------------------------------------------------------------------
+    |
+    | Setup minimal log level to watched. Log level priority used are laravel
+    | log priority which is emergency as the highest priority and debug as lowest
+    | ('emergency', 'alert', 'critical', 'error', 'warning', 'notice', 'info', 'debug')
+    |
+    */
+    'log' => env('INSPECTOR_LOG', 'warning'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Model Inspector - Enable
     |--------------------------------------------------------------------------
     |
@@ -23,7 +35,7 @@ return [
     | Use value 'true' to enable and 'false' to disable model inspector.
     |
     */
-    'enableModelInspector' => true,
+    'enableModelInspector' => env('INSPECTOR_MODEL_ENABLE', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -34,7 +46,7 @@ return [
     | Use value 'true' to enable and 'false' to disable log inspector.
     |
     */
-    'enableLogInspector' => true,
+    'enableLogInspector' => env('INSPECTOR_LOG_ENABLE', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -45,7 +57,7 @@ return [
     | Use value 'true' to enable and 'false' to disable request inspector.
     |
     */
-    'enableRequestInspector' => true,
+    'enableRequestInspector' => env('INSPECTOR_REQUEST_ENABLE', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -87,6 +99,36 @@ return [
             'request' => 1200,
         ],
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | HTML Tags
+    |--------------------------------------------------------------------------
+    |
+    | Configurable html tags to dispay different tag for new and old data to
+    | suite your frontend html style.
+    |
+    */
+    'tags' => [
+        'new' => [
+            'open'  => '<span style="color:green">',
+            'close' => '</span>',
+        ],
+        'old' => [
+            'open'  => '<span style="color:red">',
+            'close' => '</span>',
+        ]
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Paginate
+    |--------------------------------------------------------------------------
+    |
+    | Use to limiting records display per page.
+    |
+    */
+    'paginate' => 10,
 
     /*
     |--------------------------------------------------------------------------
