@@ -162,6 +162,7 @@ return [
          * Package Service Providers...
          */
         MargaTampu\LaravelInspector\InspectorServiceProvider::class,
+        MargaTampu\LaravelTeamsLogging\LoggerServiceProvider::class,
 
         /*
          * Application Service Providers...

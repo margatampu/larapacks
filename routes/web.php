@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    // $message = 'message here';
+    // $message = 'message here ' . date('H:i:s');
     // Log::emergency($message);
     // Log::alert($message);
     // Log::critical($message);
@@ -22,13 +22,7 @@ Route::get('/', function () {
     // Log::info($message);
     // Log::debug($message);
 
-    // Log::channel('teams')->error('Error message here: ' . date('H:i:s'));
-
-    try {
-        $a = 3 / 0;
-    } catch (\Exception $e) {
-        Log::error($e);
-    }
+    \Log::channel('teams')->emergency('Error message here: ' . date('H:i:s'));
 
     // return view('welcome');
 });
